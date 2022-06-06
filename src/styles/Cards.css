@@ -1,0 +1,48 @@
+.container {
+  background-color: #221f1f;
+  display: flex;
+  justify-content: space-evenly;
+  margin-left: 2%;
+  width: 96%;
+  margin-top: 20px;
+}
+/* 
+img {
+  width: 177px;
+  height: 200px;
+  cursor: pointer;
+  border-radius: 2px;
+}
+*/
+img:hover {
+  cursor: pointer;
+}
+
+.item {
+  position: relative;
+  display: block;
+  flex: 1 1 0px;
+  transition: transform 250ms;
+}
+
+.container:focus-within .item,
+.container:hover .item {
+  transform: translateX(-3%);
+}
+
+.item:focus ~ .item,
+.item:hover ~ .item {
+  transform: translateX(3%);
+}
+
+.container .item:focus,
+.container .item:hover {
+  transform: scale(1.2);
+  z-index: 1;
+}
+
+.item img {
+  width: 177px;
+  height: 200px;
+  border-radius: 3px;
+}
